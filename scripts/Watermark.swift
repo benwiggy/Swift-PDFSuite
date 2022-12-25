@@ -14,10 +14,15 @@ let startCoord = CGPoint(x: 150, y: 200)
 
 func newURL(filepath: String, newbit: String) -> String {
     var newname = filepath
+    var index = 0
     while (FileManager.default.fileExists(atPath: newname)) {
-    newname = (newname as NSString).deletingPathExtension
-// Could be improved with incremental number added to filename
-    newname += newbit
+        newname = (filepath as NSString).deletingPathExtension
+        if index == 0 {
+            newname += newbit
+        } else {
+            newname += " " + String(index) + newbit
+        }
+        index += 1
     }
 return newname
 }
