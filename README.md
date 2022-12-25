@@ -8,3 +8,5 @@ However, it is possible to use Swift as a scripting language! It's slow as a bri
 And, Apple has provided a mechanism for running Swift scripts in Shortcuts. So I'm translating my python scripts for PDF manipulation into Swift.
 
 You'll find them in the scripts folder. 
+
+HOWEVER -- using Swift raises the possibility of creating a command line tool -- 'pdfutil' -- with subcommands and flags for the various actions and options in the scripts. That's the end-goal.
